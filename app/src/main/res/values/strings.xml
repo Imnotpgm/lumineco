@@ -1,10 +1,4 @@
 <resources>
     <string name="app_name">My Application</string>
-
-    <string-array name="Menu_principal">
-        <item>Stats</item>
-        <item>Stats</item>
-        <item>Stats</item>
-        <item>Stats</item>
-    </string-array>
+    <string name="Quitter">Quitter</string>
 </resources>
