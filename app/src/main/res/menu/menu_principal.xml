@@ -12,17 +12,13 @@
             <item android:id="@+id/Accueil"
                 android:title="Accueil"/>
             <item android:id="@+id/Stats"
-                android:title="Stats"/>
+                android:title="@string/Stats"/>
             <item android:id="@+id/Profil_ampoule"
-                android:title="Profil_ampoule"/>
+                android:title="@string/Profil_ampoule"/>
             <item android:id="@+id/Ajouter_ampoule"
-                android:title="Ajouter_ampoule"/>
+                android:title="@string/Ajouter_ampoule"/>
 
         </menu>
 
     </item>
-
-
-
-
 </menu>

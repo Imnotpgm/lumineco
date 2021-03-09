@@ -1,4 +1,7 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="Stats">Statistiques</string>
+    <string name="Profil_ampoule">Profil ampoule</string>
+    <string name="Ajouter_ampoule">Ajouter ampoule</string>
     <string name="Quitter">Quitter</string>
 </resources>
