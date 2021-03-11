@@ -31,15 +31,16 @@ public class Stats extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur ajouter", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Stats.this, Ajouter_ampoule.class);
                 startActivity(intent3);
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur profil", Toast.LENGTH_SHORT).show();
                 Intent intent1 = new Intent(Stats.this, Profil_ampoule.class);
                 startActivity(intent1);
             case R.id.Accueil:
+                Toast.makeText(getApplicationContext(), "Va sur Accueil", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Stats.this, Acceuil.class);
                 startActivity(intent2);
         }

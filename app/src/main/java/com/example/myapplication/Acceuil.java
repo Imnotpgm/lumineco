@@ -34,17 +34,17 @@ public class Acceuil extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Acceuil.this, Stats.class);
                 startActivity(intent);
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur Ajouter ampoule", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Acceuil.this, Ajouter_ampoule.class);
                 startActivity(intent2);
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur profil", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Acceuil.this, Profil_ampoule.class);
                 startActivity(intent3);
                 break;

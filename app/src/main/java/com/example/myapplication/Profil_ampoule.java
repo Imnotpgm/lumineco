@@ -21,12 +21,12 @@ public class Profil_ampoule extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Profil_ampoule.this, Stats.class);
                 startActivity(intent);
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur ajouter ampoule", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Profil_ampoule.this, Ajouter_ampoule.class);
                 startActivity(intent3);
                 break;
@@ -34,6 +34,7 @@ public class Profil_ampoule extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Accueil:
+                Toast.makeText(getApplicationContext(), "Va sur Acceuil", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Profil_ampoule.this, Acceuil.class);
                 startActivity(intent2);
         }

@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -10,6 +11,13 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class Ajouter_ampoule extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_ajouter);
+
+    }
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.menu_principal, menu);
@@ -21,7 +29,7 @@ public class Ajouter_ampoule extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Ajouter_ampoule.this, Stats.class);
                 startActivity(intent);
                 break;
@@ -29,11 +37,12 @@ public class Ajouter_ampoule extends AppCompatActivity {
                 Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "AAAAAAAAAAAAAAAAAAAA", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), "Va sur Profil", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Ajouter_ampoule.this, Profil_ampoule.class);
                 startActivity(intent3);
                 break;
             case R.id.Accueil:
+                Toast.makeText(getApplicationContext(), "Va sur Acceuil", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Ajouter_ampoule.this, Acceuil.class);
                 startActivity(intent2);
         }
