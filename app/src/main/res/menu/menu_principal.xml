@@ -17,7 +17,6 @@
                 android:title="@string/Profil_ampoule"/>
             <item android:id="@+id/Ajouter_ampoule"
                 android:title="@string/Ajouter_ampoule"/>
-
         </menu>
 
     </item>
