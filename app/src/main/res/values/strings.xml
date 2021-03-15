@@ -1,7 +1,18 @@
 <resources>
-    <string name="app_name">My Application</string>
+    <string name="app_name">Lumineco</string>
     <string name="Stats">Statistiques</string>
     <string name="Profil_ampoule">Profil ampoule</string>
     <string name="Ajouter_ampoule">Ajouter ampoule</string>
     <string name="Quitter">Quitter</string>
+    <string name="incandescent">Incandescent</string>
+    <string name="halog_nes">Halogènes</string>
+    <string name="fluo_compactes">Fluo Compactes</string>
+    <string name="led">LED</string>
+    <string name="type">Type :</string>
+    <string name="nom">Nom</string>
+    <string name="consomation">Consommation</string>
+    <string name="marque">Marque</string>
+    <string name="ajouter">Ajouter</string>
+    <string name="annuler">Annuler</string>
+    <string name="accueil">Accueil</string>
 </resources>

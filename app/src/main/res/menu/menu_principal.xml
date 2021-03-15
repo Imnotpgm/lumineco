@@ -10,7 +10,7 @@
 
         <menu>
             <item android:id="@+id/Accueil"
-                android:title="Accueil"/>
+                android:title="@string/accueil"/>
             <item android:id="@+id/Stats"
                 android:title="@string/Stats"/>
             <item android:id="@+id/Profil_ampoule"

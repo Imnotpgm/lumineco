@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lumineco</string>
+    <string name="Stats">Statistics</string>
+    <string name="Profil_ampoule">Bulb profile</string>
+    <string name="Ajouter_ampoule">Add bulb</string>
+    <string name="Quitter">Exit</string>
+    <string name="incandescent">Incandescent</string>
+    <string name="halog_nes">Halogens</string>
+    <string name="fluo_compactes">Compact Fluo</string>
+    <string name="led">LED</string>
+    <string name="type">Type :</string>
+    <string name="nom">Name</string>
+    <string name="consomation">Consumption</string>
+    <string name="marque">Brand</string>
+    <string name="ajouter">Add</string>
+    <string name="annuler">Cancel</string>
+    <string name="accueil">Home</string>
+</resources>

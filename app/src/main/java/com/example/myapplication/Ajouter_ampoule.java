@@ -5,6 +5,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -12,10 +15,40 @@ import androidx.appcompat.app.AppCompatActivity;
 
 public class Ajouter_ampoule extends AppCompatActivity {
 
+    SQLClient BasedeDonnee;
+    Button add_but;
+    EditText add_nom;
+    EditText add_conso;
+    EditText add_marque;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ajouter);
+
+        BasedeDonnee = new SQLClient(this);
+
+        add_but = findViewById(R.id.add_but);
+        add_nom = findViewById(R.id.add_nom);
+        add_conso = findViewById(R.id.add_conso);
+        add_marque = findViewById(R.id.add_marque);
+
+        add_but.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String nom = add_nom.getText().toString();
+                String conso = add_conso.getText().toString();
+                String marque = add_marque.getText().toString();
+                if(!nom.equals("") && !conso.equals("") && !marque.equals("") && BasedeDonnee.insertData(nom,conso,marque,"type") ){
+                    Toast.makeText(Ajouter_ampoule.this, "Ampoule ajouter",Toast.LENGTH_SHORT).show();
+                    add_nom.setText(" ");
+                    add_conso.setText(" ");
+                    add_marque.setText(" ");
+                }else{
+                    Toast.makeText(Ajouter_ampoule.this, "Ampoule n'a pas etais ajouter verifier tout les champs",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
 
     }
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -48,5 +81,4 @@ public class Ajouter_ampoule extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-
 }

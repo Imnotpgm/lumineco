@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Ajouter_ampoule">
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="321dp"
+        android:layout_height="96dp"
+        android:baselineAligned="false"
+        app:layout_constraintBottom_toTopOf="@+id/button2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.475">
+
+        <RadioButton
+            android:id="@+id/radioButton5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/halog_nes"
+            tools:layout_editor_absoluteX="60dp"
+            tools:layout_editor_absoluteY="443dp" />
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/led" />
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="42dp"
+        android:layout_height="29dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:layout_marginTop="52dp"
+        android:text="@string/type"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_marque" />
+
+    <EditText
+        android:id="@+id/add_nom"
+        android:layout_width="290dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/nom"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.073"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.126" />
+
+    <EditText
+        android:id="@+id/add_conso"
+        android:layout_width="290dp"
+        android:layout_height="54dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/consomation"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_marque" />
+
+    <EditText
+        android:id="@+id/add_marque"
+        android:layout_width="290dp"
+        android:layout_height="54dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="@string/marque"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.895"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.122" />
+
+    <Button
+        android:id="@+id/add_but"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/ajouter"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toEndOf="@+id/button2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.996" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:text="@string/annuler"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <RadioButton
+        android:id="@+id/radioButton6"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="19dp"
+        android:text="@string/incandescent"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintTop_toBottomOf="@+id/add_conso" />
+
+    <RadioButton
+        android:id="@+id/radioButton2"
+        android:layout_width="250dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="56dp"
+        android:text="@string/fluo_compactes"
+        app:layout_constraintBottom_toBottomOf="@+id/add_but"
+        app:layout_constraintStart_toEndOf="@+id/radioGroup" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
