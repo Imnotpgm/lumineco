@@ -37,7 +37,6 @@ public class Ajouter_ampoule extends AppCompatActivity {
         add_conso = findViewById(R.id.add_conso);
         add_marque = findViewById(R.id.add_marque);
         RadioGroup add_type = (RadioGroup) findViewById(R.id.add_type);
-        int radioButton_id = add_type.getCheckedRadioButtonId();
 
         add_but.setOnClickListener(new View.OnClickListener() {
             @Override

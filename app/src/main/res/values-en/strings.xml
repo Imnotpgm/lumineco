@@ -16,4 +16,5 @@
     <string name="ajouter">Add</string>
     <string name="annuler">Cancel</string>
     <string name="accueil">Home</string>
+    <string name="Meteo">Weather</string>
 </resources>
