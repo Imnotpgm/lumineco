@@ -7,7 +7,7 @@
     tools:context=".Ajouter_ampoule">
 
     <RadioGroup
-        android:id="@+id/radioGroup"
+        android:id="@+id/add_type"
         android:layout_width="321dp"
         android:layout_height="96dp"
         android:baselineAligned="false"
@@ -19,7 +19,7 @@
         app:layout_constraintVertical_bias="0.475">
 
         <RadioButton
-            android:id="@+id/radioButton5"
+            android:id="@+id/radiobutton_Halo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/halog_nes"
@@ -27,7 +27,7 @@
             tools:layout_editor_absoluteY="443dp" />
 
         <RadioButton
-            android:id="@+id/radioButton"
+            android:id="@+id/radiobutton_LED"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/led" />
@@ -109,22 +109,22 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <RadioButton
-        android:id="@+id/radioButton6"
+        android:id="@+id/radiobutton_Inca"
         android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginTop="19dp"
         android:text="@string/incandescent"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup"
+        app:layout_constraintStart_toEndOf="@+id/add_type"
         app:layout_constraintTop_toBottomOf="@+id/add_conso" />
 
     <RadioButton
-        android:id="@+id/radioButton2"
+        android:id="@+id/radiobutton_Com"
         android:layout_width="250dp"
         android:layout_height="48dp"
         android:layout_marginBottom="56dp"
         android:text="@string/fluo_compactes"
         app:layout_constraintBottom_toBottomOf="@+id/add_but"
-        app:layout_constraintStart_toEndOf="@+id/radioGroup" />
+        app:layout_constraintStart_toEndOf="@+id/add_type" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

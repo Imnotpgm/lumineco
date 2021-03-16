@@ -8,6 +8,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -21,6 +23,7 @@ public class Ajouter_ampoule extends AppCompatActivity {
     EditText add_conso;
     EditText add_marque;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,6 +35,8 @@ public class Ajouter_ampoule extends AppCompatActivity {
         add_nom = findViewById(R.id.add_nom);
         add_conso = findViewById(R.id.add_conso);
         add_marque = findViewById(R.id.add_marque);
+        RadioGroup add_type = (RadioGroup) findViewById(R.id.add_type);
+        int radioButton_id = add_type.getCheckedRadioButtonId();
 
         add_but.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,13 +44,20 @@ public class Ajouter_ampoule extends AppCompatActivity {
                 String nom = add_nom.getText().toString();
                 String conso = add_conso.getText().toString();
                 String marque = add_marque.getText().toString();
-                if(!nom.equals("") && !conso.equals("") && !marque.equals("") && BasedeDonnee.insertData(nom,conso,marque,"type") ){
-                    Toast.makeText(Ajouter_ampoule.this, "Ampoule ajouter",Toast.LENGTH_SHORT).show();
-                    add_nom.setText(" ");
-                    add_conso.setText(" ");
-                    add_marque.setText(" ");
-                }else{
-                    Toast.makeText(Ajouter_ampoule.this, "Ampoule n'a pas etais ajouter verifier tout les champs",Toast.LENGTH_SHORT).show();
+                int radioButton_id = add_type.getCheckedRadioButtonId();
+                if (radioButton_id != -1) {
+                    RadioButton radioButton_Choices = (RadioButton) findViewById(radioButton_id);
+                    String type = radioButton_Choices.getText().toString();
+                    if(!nom.equals("") && !conso.equals("") && !marque.equals("") && BasedeDonnee.insertData(nom,conso,marque,type) ){
+                        Toast.makeText(Ajouter_ampoule.this, "Ampoule ajouter",Toast.LENGTH_SHORT).show();
+                        add_nom.setText(" ");
+                        add_conso.setText(" ");
+                        add_marque.setText(" ");
+                    }else{
+                        Toast.makeText(Ajouter_ampoule.this, "Ampoule n'a pas etais ajouter verifier tout les champs",Toast.LENGTH_SHORT).show();
+                    }
+                } else {
+                    Toast.makeText(Ajouter_ampoule.this, "SELECTIONE UN TYPE", Toast.LENGTH_LONG).show();
                 }
             }
         });

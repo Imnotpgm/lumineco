@@ -3,6 +3,7 @@ package com.example.myapplication;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
+import android.security.identity.PersonalizationData;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -26,8 +27,8 @@ public class Profil_ampoule extends AppCompatActivity {
     ListView marquelist;
     ListView typelist;
 
-    ArrayList<String> listItem;
-    ArrayAdapter adapter;
+    ArrayList<Ampoule> listItem;
+    CustomList_ampouleAdapter adapter;
 
 
 
@@ -35,7 +36,9 @@ public class Profil_ampoule extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profil);
+
         db = new SQLClient(this);
+
         listItem = new ArrayList<>();
         liste_ampoule = findViewById(R.id.liste_ampoule);
 
@@ -57,9 +60,14 @@ public class Profil_ampoule extends AppCompatActivity {
             Toast.makeText(this,"Probleme ou pas de valeur dans la bd",Toast.LENGTH_SHORT).show();
         }else{
             while (cursor.moveToNext()){
-                listItem.add(cursor.getString(1));// 1 = Nom
+                String nom = cursor.getString(1);// 1 = Nom
+                String conso = cursor.getString(2);// 2 = consomation
+                String marque = cursor.getString(3);// 3 = marque
+                String type = cursor.getString(4);// 4 = type
+                Ampoule val = new Ampoule(nom, conso, marque, type);
+                this.listItem.add(val);
             }
-            adapter = new ArrayAdapter<>(this, android.R.layout.simple_list_item_1,listItem);
+            adapter = new CustomList_ampouleAdapter(this,listItem);
             liste_ampoule.setAdapter(adapter);
         }
     }
