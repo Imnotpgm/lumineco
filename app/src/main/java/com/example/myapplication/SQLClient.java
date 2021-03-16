@@ -73,6 +73,14 @@ public class SQLClient extends SQLiteOpenHelper {
             return cursor;
         }
 
+        public int deleteData(String nom,String conso,String marque ,String type){
+            SQLiteDatabase db = this.getReadableDatabase();
+            return db.delete(NOM_TABLE,"nom=? and conso=? and marque=? and type=?",new String[]{nom,conso,marque,type});
+        }
+
+
+
+
 
     }
 

@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
@@ -10,10 +11,12 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import java.util.ArrayList;
@@ -23,9 +26,7 @@ public class Profil_ampoule extends AppCompatActivity {
     SQLClient db;
 
     ListView liste_ampoule;
-    ListView consolist;
-    ListView marquelist;
-    ListView typelist;
+
 
     ArrayList<Ampoule> listItem;
     CustomList_ampouleAdapter adapter;
@@ -42,13 +43,29 @@ public class Profil_ampoule extends AppCompatActivity {
         listItem = new ArrayList<>();
         liste_ampoule = findViewById(R.id.liste_ampoule);
 
+
         viewdata();
 
         liste_ampoule.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                String text = liste_ampoule.getItemAtPosition(position).toString();
-                Toast.makeText(Profil_ampoule.this,""+text,Toast.LENGTH_SHORT).show();
+                AlertDialog.Builder builder = new AlertDialog.Builder(Profil_ampoule.this);
+                builder.setMessage("Tu veux suppr");
+                builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        Ampoule amp = listItem.get(position);
+                        if(db.deleteData(amp.getAmpouleNom(),amp.getAmpouleConso(),amp.getAmpouleMarque(),amp.getAmpouleType()) >= 1) {
+                            Toast.makeText(Profil_ampoule.this, "La valeur a etait del", Toast.LENGTH_SHORT).show();
+                            listItem.remove(amp);
+                            adapter.notifyDataSetChanged();
+                        }else{
+                            Toast.makeText(Profil_ampoule.this, "ALED", Toast.LENGTH_SHORT).show();
+                        }
+                    }
+                });
+                builder.setNegativeButton("NO",null);
+                builder.show();
             }
         });
     }

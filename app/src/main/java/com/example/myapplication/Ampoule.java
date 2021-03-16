@@ -14,6 +14,8 @@ public class Ampoule {
         this.conso = ampouleConso;
     }
 
+
+
     public String getAmpouleNom() {
         return nom;
     }
@@ -27,7 +29,7 @@ public class Ampoule {
     }
 
     public String getAmpouleConso() {
-        return conso + " Watt";
+        return conso ;
     }
 
 
