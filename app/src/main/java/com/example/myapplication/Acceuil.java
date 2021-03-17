@@ -55,7 +55,7 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
     static Location location;
     static double lat ;//= location.getLatitude();
     static double lng ;//= location.getLongitude();
-    OpenWeatherMap openWeatherMap = new OpenWeatherMap();
+    static OpenWeatherMap openWeatherMap = new OpenWeatherMap();
 
     int MY_PERMISSION = 0;
 
@@ -262,7 +262,9 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
 
     }
 
-
+    public static OpenWeatherMap getOpenWeatherMap() {
+        return openWeatherMap;
+    }
 }
 
 

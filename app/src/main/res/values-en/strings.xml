@@ -9,7 +9,7 @@
     <string name="halog_nes">Halogens</string>
     <string name="fluo_compactes">Compact Fluo</string>
     <string name="led">LED</string>
-    <string name="type">Type :</string>
+    <string name="type">Type</string>
     <string name="nom">Name</string>
     <string name="consomation">Consumption</string>
     <string name="marque">Brand</string>
@@ -26,4 +26,9 @@
     <string name="AjouterAmpoule">Bulb added</string>
     <string name="AmpouleNonAjoutée">Bulb was not added</string>
     <string name="Type_Selection">CHOSE A TYPE</string>
+    <string name="Bienvenue">Welcome to Lumineco</string>
+    <string name="Instruction">Please click on the weather button</string>
+    <string name="nbAmpoule1">You actually posses</string>
+    <string name="nbAmpoule2">light bulbs</string>
+    <string name="EstimationCons">Daily Consumption estimate</string>
 </resources>

@@ -86,4 +86,26 @@
         app:layout_constraintTop_toBottomOf="@+id/textView4"
         app:layout_constraintVertical_bias="0.0" />
 
+    <TextView
+        android:id="@+id/textViewConso"
+        android:layout_width="98dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginLeft="12dp"
+        android:text="@string/consomation"
+        app:layout_constraintBottom_toTopOf="@+id/textView_Conso"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/Unité"
+        android:layout_width="98dp"
+        android:layout_height="18dp"
+        android:text=" Watt"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/textView_Conso"
+        app:layout_constraintTop_toBottomOf="@+id/textView_Type"
+        app:layout_constraintVertical_bias="0.457" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

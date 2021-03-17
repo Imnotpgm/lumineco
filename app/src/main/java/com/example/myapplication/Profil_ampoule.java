@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.Bundle;
 import android.security.identity.PersonalizationData;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -26,6 +27,8 @@ public class Profil_ampoule extends AppCompatActivity {
     SQLClient db;
 
     ListView liste_ampoule;
+
+    private static String TAG = "aled";
 
 
     ArrayList<Ampoule> listItem;
@@ -55,6 +58,7 @@ public class Profil_ampoule extends AppCompatActivity {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Ampoule amp = listItem.get(position);
+                        Log.v(TAG,amp.getAmpouleConso());
                         if(db.deleteData(amp.getAmpouleNom(),amp.getAmpouleConso(),amp.getAmpouleMarque(),amp.getAmpouleType()) >= 1) {
                             Toast.makeText(Profil_ampoule.this, R.string.SupprAmpoule, Toast.LENGTH_SHORT).show();
                             listItem.remove(amp);
@@ -79,6 +83,7 @@ public class Profil_ampoule extends AppCompatActivity {
             while (cursor.moveToNext()){
                 String nom = cursor.getString(1);// 1 = Nom
                 String conso = cursor.getString(2);// 2 = consomation
+                Log.v(TAG,conso);
                 String marque = cursor.getString(3);// 3 = marque
                 String type = cursor.getString(4);// 4 = type
                 Ampoule val = new Ampoule(nom, conso, marque, type);
@@ -116,4 +121,5 @@ public class Profil_ampoule extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
+
 }

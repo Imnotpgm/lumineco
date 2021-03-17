@@ -8,7 +8,7 @@
     <string name="halog_nes">Halogènes</string>
     <string name="fluo_compactes">Fluo Compactes</string>
     <string name="led">LED</string>
-    <string name="type">Type :</string>
+    <string name="type">Type</string>
     <string name="nom">Nom</string>
     <string name="consomation">Consommation</string>
     <string name="marque">Marque</string>
@@ -25,5 +25,10 @@
     <string name="AjouterAmpoule">Ampoule ajoutée</string>
     <string name="AmpouleNonAjoutée">Ampoule n\'a pas eté ajoutée verifier tout les champs</string>
     <string name="Type_Selection">SELECTIONNE UN TYPE</string>
+    <string name="Bienvenue">Bienvenue sur Lumineco</string>
+    <string name="Instruction">Veuillez cliquer sur le bouton meteo</string>
+    <string name="nbAmpoule1">Vous possédez actuellement</string>
+    <string name="nbAmpoule2">ampoules</string>
+    <string name="EstimationCons">Estimation de la consommation</string>
 
 </resources>
