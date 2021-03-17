@@ -88,7 +88,7 @@
         android:layout_marginTop="41dp"
         android:layout_marginBottom="37dp"
         android:ems="10"
-        android:inputType="textPersonName"
+        android:inputType="number"
         android:text="@string/consomation"
         app:layout_constraintBottom_toTopOf="@+id/add_marque"
         app:layout_constraintEnd_toEndOf="parent"
