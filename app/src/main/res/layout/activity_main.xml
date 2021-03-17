@@ -99,5 +99,14 @@
         tools:ignore="InvalidId" />
     <!--android:visibility="invisible"-->
 
+    <TextView
+        android:id="@+id/Bienvenue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Bienvenue sur Lumineco"
+        android:textSize="30sp"
+        android:textStyle="bold"/>
+
 
 </LinearLayout>
