@@ -16,4 +16,14 @@
     <string name="annuler">Annuler</string>
     <string name="accueil">Accueil</string>
     <string name="Meteo">Meteo</string>
+    <string name="ToastSameActivity">Vous etes sur cette page</string>
+    <string name="SupprAmpoule">L\'Ampoule a été supprimée</string>
+    <string name="Profil_Erreur">Erreur lors de la suppression</string>
+    <string name="ViewDataErreur">Probleme ou pas de valeur dans la base de données</string>
+    <string name="ConfirmerSuppression">Valider suppression</string>
+    <string name="API_Error">Erreur lors de l\'appel à l\'API :</string>
+    <string name="AjouterAmpoule">Ampoule ajoutée</string>
+    <string name="AmpouleNonAjoutée">Ampoule n\'a pas eté ajoutée verifier tout les champs</string>
+    <string name="Type_Selection">SELECTIONNE UN TYPE</string>
+
 </resources>

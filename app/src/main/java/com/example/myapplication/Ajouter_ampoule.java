@@ -49,15 +49,15 @@ public class Ajouter_ampoule extends AppCompatActivity {
                     RadioButton radioButton_Choices = (RadioButton) findViewById(radioButton_id);
                     String type = radioButton_Choices.getText().toString();
                     if(!nom.equals("") && !conso.equals("") && !marque.equals("") && BasedeDonnee.insertData(nom,conso,marque,type) ){
-                        Toast.makeText(Ajouter_ampoule.this, "Ampoule ajouter",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Ajouter_ampoule.this, R.string.AjouterAmpoule,Toast.LENGTH_SHORT).show();
                         add_nom.setText(" ");
                         add_conso.setText(" ");
                         add_marque.setText(" ");
                     }else{
-                        Toast.makeText(Ajouter_ampoule.this, "Ampoule n'a pas etais ajouter verifier tout les champs",Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Ajouter_ampoule.this, R.string.AmpouleNonAjoutée,Toast.LENGTH_SHORT).show();
                     }
                 } else {
-                    Toast.makeText(Ajouter_ampoule.this, "SELECTIONE UN TYPE", Toast.LENGTH_LONG).show();
+                    Toast.makeText(Ajouter_ampoule.this, R.string.Type_Selection, Toast.LENGTH_LONG).show();
                 }
             }
         });
@@ -74,20 +74,17 @@ public class Ajouter_ampoule extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Ajouter_ampoule.this, Stats.class);
                 startActivity(intent);
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.ToastSameActivity, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "Va sur Profil", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Ajouter_ampoule.this, Profil_ampoule.class);
                 startActivity(intent3);
                 break;
             case R.id.Accueil:
-                Toast.makeText(getApplicationContext(), "Va sur Acceuil", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Ajouter_ampoule.this, Acceuil.class);
                 startActivity(intent2);
         }

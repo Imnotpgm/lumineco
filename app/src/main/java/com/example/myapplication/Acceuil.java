@@ -130,17 +130,17 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
             public void onClick(View v) {
                 // appel méthode getResult de l'interface OpenWeatherMapInterface
                 Call<JsonElement> appel = serviceAPI.getResult(Acceuil.this.latitude, Acceuil.this.longitude, Acceuil.this.key, Acceuil.this.units);
-                Log.v(TAG, appel.toString());
-                Log.v(TAG, "Test");
-                Log.v(TAG,"Latitude : "+ Acceuil.this.latitude);
-                Log.v(TAG, "Longitude : "+Acceuil.this.longitude);
+                //Log.v(TAG, appel.toString());
+                //Log.v(TAG, "Test");
+                //Log.v(TAG,"Latitude : "+ Acceuil.this.latitude);
+                //Log.v(TAG, "Longitude : "+Acceuil.this.longitude);
                 appel.enqueue(new Callback<JsonElement>() {
                     @Override
                     public void onResponse(Call<JsonElement> call, Response<JsonElement> response) {
-                        Log.v(TAG, "Entré dans le onResponse");
-                        Log.v(TAG, String.valueOf(response.raw().request().url()));
+                        //Log.v(TAG, "Entré dans le onResponse");
+                        //Log.v(TAG, String.valueOf(response.raw().request().url()));
                         if (response.isSuccessful()) {
-                            Log.v(TAG,"réponse successful");
+                            //Log.v(TAG,"réponse successful");
                             // Récupère le contenu JSON de la réponse
                             JsonElement contenu = response.body();
                             Log.v(TAG, contenu.toString());
@@ -156,7 +156,7 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
                             txtCelsius.setText(String.format("%.2f °C",openWeatherMap.getMain().getTemp()));
                             Picasso.with(Acceuil.this).load(Common.getImage(openWeatherMap.getWeather().get(0).getIcon())).into(imageView);
                         } else {
-                            Log.v(TAG, "réponse non successful");
+                            //Log.v(TAG, "réponse non successful");
                         }
                     }
 
@@ -165,7 +165,7 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
 
                     @Override
                     public void onFailure(Call<JsonElement> call, Throwable t) {
-                        Toast.makeText(Acceuil.this, "Erreur lors de l'appel à l'API :" + t.getMessage(), Toast.LENGTH_LONG).show();
+                        Toast.makeText(Acceuil.this, getString(R.string.API_Error) + t.getMessage(), Toast.LENGTH_LONG).show();
                     }
                 });
             }
@@ -219,22 +219,19 @@ public class Acceuil extends AppCompatActivity implements LocationListener {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Acceuil.this, Stats.class);
                 startActivity(intent);
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "Va sur Ajouter ampoule", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Acceuil.this, Ajouter_ampoule.class);
                 startActivity(intent2);
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "Va sur profil", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Acceuil.this, Profil_ampoule.class);
                 startActivity(intent3);
                 break;
             case R.id.Accueil:
-                Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.ToastSameActivity, Toast.LENGTH_SHORT).show();
                 break;
         }
         return super.onOptionsItemSelected(item);

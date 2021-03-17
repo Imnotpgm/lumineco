@@ -50,17 +50,17 @@ public class Profil_ampoule extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 AlertDialog.Builder builder = new AlertDialog.Builder(Profil_ampoule.this);
-                builder.setMessage("Tu veux suppr");
+                builder.setMessage(R.string.ConfirmerSuppression);
                 builder.setPositiveButton("YES", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
                         Ampoule amp = listItem.get(position);
                         if(db.deleteData(amp.getAmpouleNom(),amp.getAmpouleConso(),amp.getAmpouleMarque(),amp.getAmpouleType()) >= 1) {
-                            Toast.makeText(Profil_ampoule.this, "La valeur a etait del", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Profil_ampoule.this, R.string.SupprAmpoule, Toast.LENGTH_SHORT).show();
                             listItem.remove(amp);
                             adapter.notifyDataSetChanged();
                         }else{
-                            Toast.makeText(Profil_ampoule.this, "ALED", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(Profil_ampoule.this, R.string.Profil_Erreur, Toast.LENGTH_SHORT).show();
                         }
                     }
                 });
@@ -74,7 +74,7 @@ public class Profil_ampoule extends AppCompatActivity {
         Cursor cursor = db.viewdata();
 
         if(cursor.getCount() == 0){
-            Toast.makeText(this,"Probleme ou pas de valeur dans la bd",Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, R.string.ViewDataErreur,Toast.LENGTH_SHORT).show();
         }else{
             while (cursor.moveToNext()){
                 String nom = cursor.getString(1);// 1 = Nom
@@ -100,20 +100,17 @@ public class Profil_ampoule extends AppCompatActivity {
         int id = item.getItemId();
         switch (id) {
             case R.id.Stats:
-                Toast.makeText(getApplicationContext(), "Va sur Stats", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Profil_ampoule.this, Stats.class);
                 startActivity(intent);
                 break;
             case R.id.Ajouter_ampoule:
-                Toast.makeText(getApplicationContext(), "Va sur ajouter ampoule", Toast.LENGTH_SHORT).show();
                 Intent intent3 = new Intent(Profil_ampoule.this, Ajouter_ampoule.class);
                 startActivity(intent3);
                 break;
             case R.id.Profil_ampoule:
-                Toast.makeText(getApplicationContext(), "Vous etes sur cette page", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getApplicationContext(), R.string.ToastSameActivity, Toast.LENGTH_SHORT).show();
                 break;
             case R.id.Accueil:
-                Toast.makeText(getApplicationContext(), "Va sur Acceuil", Toast.LENGTH_SHORT).show();
                 Intent intent2 = new Intent(Profil_ampoule.this, Acceuil.class);
                 startActivity(intent2);
         }

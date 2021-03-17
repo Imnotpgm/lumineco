@@ -17,4 +17,13 @@
     <string name="annuler">Cancel</string>
     <string name="accueil">Home</string>
     <string name="Meteo">Weather</string>
+    <string name="ToastSameActivity">You are already on this page</string>
+    <string name="SupprAmpoule">The bulb got deleted</string>
+    <string name="Profil_Erreur">Erreur lors de la suppression</string>
+    <string name="ViewDataErreur">Error or no value in data base</string>
+    <string name="ConfirmerSuppression">Confirm deleting</string>
+    <string name="API_Error">Error when calling the API</string>
+    <string name="AjouterAmpoule">Bulb added</string>
+    <string name="AmpouleNonAjoutée">Bulb was not added</string>
+    <string name="Type_Selection">CHOSE A TYPE</string>
 </resources>
